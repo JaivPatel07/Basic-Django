@@ -54,7 +54,9 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'], # initially it is empty [] here i wrote 'templates' because we will create a templates folder in our core app and then we will add the path to that templates folder here. so that Django will know where to look for the templates when we render them in our views. 
+        # now go to about.html
+        
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

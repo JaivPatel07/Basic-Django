@@ -17,6 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from . import views #importing the views.py file to use the functions we created there. (.) is used to import from the current directory
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home, name='home'),  #this is the home page we created in views.py
+    path('about/', views.about, name='about'),
+    path('contact/', views.contact, name='contact'),
 ]
