@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os # we need to import os module to use the os.path.join() function to join the BASE_DIR with the static folder to get the path to the static files. so that we can tell Django where to look for the static files when we use them in our templates. so go to the TEMPLATES setting and add the path to the static files there. 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -56,7 +57,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['templates'], # initially it is empty [] here i wrote 'templates' because we will create a templates folder in our core app and then we will add the path to that templates folder here. so that Django will know where to look for the templates when we render them in our views. 
         # now go to about.html
-        
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,6 +118,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] # we need to add the path to the static files here so that Django will know where to look for the static files when we use them in our templates.
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

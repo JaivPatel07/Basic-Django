@@ -1,9 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    <!-- {% static 'about.css' %} if we run this than it will show did you forget to add {% load static %} in the top of the file. so we have to add {% load static %} in the top of the file to use the static files in our templates. so go to the top of the file and add {% load static %} there. -->
+    <!-- after adding {% load static %} in the top of the file still css is not working we need to tell Django where to look for the static files. so we have to add the path to the static files in the settings.py file. so go to settings.py file and add the path to the static files there.  -->
 </head>
 <body>
     <h1>First Django Project</h1>
