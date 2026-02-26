@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app1',# if we create a new app called app1 then we need to add it to the INSTALLED_APPS list so that Django will know that this app is part of our project and it will be able to find the views and templates of this app when we use them in our project.
 ]
 
 MIDDLEWARE = [

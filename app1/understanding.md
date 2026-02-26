@@ -1,0 +1,1 @@
+for creating this we need to run python .\manage.py startapp app1
