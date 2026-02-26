@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, eos obcaecati deserunt, ea sint quas exercitationem repellendus quae delectus pariatur odit nam impedit qui. Amet, alias excepturi dolor iste repudiandae sunt unde praesentium vitae consequatur odit quidem rem tenetur minus, cum aperiam aut assumenda necessitatibus suscipit nobis esse molestias voluptate porro odio. Fugit hic asperiores ipsam molestiae labore est at minus, iste natus voluptates maxime veritatis vero id quibusdam distinctio perspiciatis blanditiis sed ab odio soluta harum? Quae dolorum magnam quaerat aperiam earum mollitia corporis facilis eligendi? Id eaque labore exercitationem nihil nobis laborum adipisci est saepe rem, accusamus atque.</p>
-</body>
-</html>
+{% extends "layout.html" %}
+{% comment %}
+we can see this file can directly use the layout.html because we put template in settings.py
+{% endcomment %}
+
+{% block title %}App1 page{% endblock title %}
+
+{% block content %}
+    <h1>This is app1 page</h1>
+{% endblock content %}
