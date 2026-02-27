@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include # we need to import include to include the urls of app1 in the urls of project.
-
+from django.conf import settings # we need to import settings to use the MEDIA_URL and MEDIA_ROOT settings in the urls.py file.
+from django.conf.urls.static import static # we need to import static to use the static function to serve the media files in the development server. so that we can use the media files in our templates.
 from . import views #importing the views.py file to use the functions we created there. (.) is used to import from the current directory
 
 urlpatterns = [
@@ -26,5 +27,8 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
 
 
+
     path('app1/', include('app1.urls')), #when its go to app1/ that it can use app1.urls to find the views of app1 and render the templates of app1.
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # we need to add this line to serve the media files in the development server. so that we can use the media files in our templates.
+
+

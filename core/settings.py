@@ -121,6 +121,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] # we need to add the path to the static files here so that Django will know where to look for the static files when we use them in our templates.
 
+MIDIA_URL = '/media/' # we need to add the MEDIA_URL setting to tell Django where to look for the media files when we use them in our templates. so that we can use the media files in our templates.
+
+MIDIA_ROOT = os.path.join(BASE_DIR, 'media') # we need to add the MEDIA_ROOT setting to tell Django where to store the media files when we upload them. so that we can use the media files in our templates. and we also need to add the MEDIA_URL setting to tell Django where to look for the media files when we use them in our templates. also we need to add the path to the media files in the urls.py file so that Django will know where to look for the media files when we use them in our templates. so go to urls.py and add the path to the media files there.
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
