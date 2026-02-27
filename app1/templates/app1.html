@@ -7,4 +7,14 @@ we can see this file can directly use the layout.html because we put template in
 
 {% block content %}
     <h1>This is app1 page</h1>
+
+    {% for a in details %}
+    <table>
+        <tr>
+            <td>{{a.name}}</td>
+            <td>{{a.department}}</td>
+        </tr>
+
+    </table>
+    {% endfor %}
 {% endblock content %}
